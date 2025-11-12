@@ -112,9 +112,9 @@ Material:
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _AuroraBlend: 2.9
-    - _AuroraIntensity: 4.62
-    - _AuroraNoiseScale: 100
-    - _AuroraPower: 3.7
+    - _AuroraIntensity: 1
+    - _AuroraNoiseScale: 0
+    - _AuroraPower: -0.2
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Blend: 0
@@ -133,7 +133,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GradientOffset: 0.21
+    - _GradientOffset: 0
     - _HorizonBlend: 9.3
     - _Metallic: 0
     - _NadirBlend: 50
