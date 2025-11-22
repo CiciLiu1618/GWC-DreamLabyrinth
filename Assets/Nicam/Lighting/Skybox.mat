@@ -112,9 +112,9 @@ Material:
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _AuroraBlend: 2.9
-    - _AuroraIntensity: 4.62
-    - _AuroraNoiseScale: 100
-    - _AuroraPower: 3.7
+    - _AuroraIntensity: 1.51
+    - _AuroraNoiseScale: 18.9
+    - _AuroraPower: -0.5
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Blend: 0
@@ -133,7 +133,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GradientOffset: 0.21
+    - _GradientOffset: 0
     - _HorizonBlend: 9.3
     - _Metallic: 0
     - _NadirBlend: 50
@@ -147,16 +147,16 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _StarIntensity: 200
-    - _StarPower: 55
+    - _StarPower: 54.7
     - _StartHeight: 159
     - _Surface: 0
-    - _TwirlStrength: 0.5
+    - _TwirlStrength: -0.03
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _ZenithBlend: 0.7
     m_Colors:
     - _AuroraScrollSpeed: {r: 0, g: 0.05, b: 0, a: 0}
-    - _AuroraTiling: {r: 1, g: 6, b: 0, a: 0}
+    - _AuroraTiling: {r: 3, g: 6, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DistortionMinMax: {r: 5, g: 5, b: 0, a: 0}
