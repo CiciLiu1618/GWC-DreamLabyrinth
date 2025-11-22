@@ -26,6 +26,15 @@ public class RespawnTrigger : MonoBehaviour
 
     private bool isRespawning = false;
 
+    private void Start()
+    {
+        // Hide the popup at start
+        if (messageText != null)
+        {
+            messageText.enabled = false;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         // Check if the object that entered is the player
