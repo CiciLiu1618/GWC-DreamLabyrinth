@@ -34,8 +34,8 @@ public class NPCInteract : MonoBehaviour
     {
         if(inTrigger == true)
         {
-            PressE.SetActive(false);
             Message.SetActive(true);
+            PressE.SetActive(false);
         }
     }
 }
