@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Henry/Haunted Forest.unity
     guid: b77f3ec8aa83b174da7d0f0c6326b36a
   - enabled: 1
-    path: Assets/Nicam/Scenes/Level3.unity
-    guid: e67bad8bba1ec3f49b66e36bd1e9ebc8
+    path: Assets/Nicam/Scenes/Snowy.unity
+    guid: d81fc4c77fc835944a54f4ddd505030e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
