@@ -3,36 +3,38 @@ using UnityEngine;
 public class GroundTrigger : MonoBehaviour
 {
     private PlayerMove playerMove;
+    private int groundContacts = 0;
+    public LayerMask groundLayer; // Assign in Inspector
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerMove = GetComponentInParent<PlayerMove>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == playerMove.gameObject)
+        // Check if the collider is on the ground layer
+        if (((1 << other.gameObject.layer) & groundLayer) != 0)
         {
-            return;
+            groundContacts++;
+            Debug.Log("Ground entered - contacts: " + groundContacts);
+            playerMove.SetGrounded(true);
         }
-        Debug.Log("entered");
-        playerMove.SetGrounded(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == playerMove.gameObject)
+        // Check if the collider is on the ground layer
+        if (((1 << other.gameObject.layer) & groundLayer) != 0)
         {
-            return;
+            groundContacts--;
+            Debug.Log("Ground exited - contacts: " + groundContacts);
+
+            if (groundContacts <= 0)
+            {
+                groundContacts = 0;
+                playerMove.SetGrounded(false);
+            }
         }
-        Debug.Log("exited");
-        playerMove.SetGrounded(false);
     }
 }
