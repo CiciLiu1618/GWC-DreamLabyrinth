@@ -1,0 +1,310 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3842829256866845669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a136dcb2cb366747aa4c3a3bedcc434, type: 3}
+  m_Name: End
+  m_EditorClassIdentifier: Assembly-CSharp::EndNode
+  graph: {fileID: 11400000}
+  position: {x: 920, y: -120}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: -3842829256866845669}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: -3771128512145082399}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueSpoken: 
+  nodeType: Core
+  entry: 
+--- !u!114 &-3771128512145082399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eaa24e0383b8aa47816903bededcec4, type: 3}
+  m_Name: Response Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::ResponseDialogue
+  graph: {fileID: 11400000}
+  position: {x: 680, y: -88}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -3771128512145082399}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit 0
+        node: {fileID: 5212121528104068789}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -3771128512145082399}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -3842829256866845669}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueSpoken: Thank you
+  entry: 0
+  exit: 0
+  conditionType: 0
+  requiredQuestID: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8e3f718e97fac44a71dd6290d9da2a, type: 3}
+  m_Name: Large Ghosts
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueGraph
+  nodes:
+  - {fileID: 2442312198446887006}
+  - {fileID: 3061707995955018880}
+  - {fileID: -3842829256866845669}
+  - {fileID: 4003666918858746133}
+  - {fileID: 5212121528104068789}
+  - {fileID: -3771128512145082399}
+  current: {fileID: 0}
+--- !u!114 &2442312198446887006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7878791ad22874ba08deecc6f413d0, type: 3}
+  m_Name: Entry
+  m_EditorClassIdentifier: Assembly-CSharp::EntryNode
+  graph: {fileID: 11400000}
+  position: {x: -712, y: -216}
+  ports:
+    keys:
+    - exit
+    values:
+    - _fieldName: exit
+      _node: {fileID: 2442312198446887006}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 3061707995955018880}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueSpoken: 
+  nodeType: Core
+  exit: 0
+--- !u!114 &3061707995955018880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a8fed7df4b96f4899cf285f37fc8a9, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  graph: {fileID: 11400000}
+  position: {x: -344, y: -200}
+  ports:
+    keys:
+    - entry
+    - exit
+    - exit 0
+    values:
+    - _fieldName: entry
+      _node: {fileID: 3061707995955018880}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: 2442312198446887006}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 3061707995955018880}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit 0
+      _node: {fileID: 3061707995955018880}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 4003666918858746133}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  dialogueSpoken: Go away
+  entry: 0
+  exit: 0
+  speakerName: Big Ghost
+  startsQuest: 0
+  questToStart: {fileID: 0}
+  completesQuest: 0
+  questToCompleteID: 
+  conditionType: 2
+  requiredQuestID: Repel Ghosts
+--- !u!114 &4003666918858746133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eaa24e0383b8aa47816903bededcec4, type: 3}
+  m_Name: Response Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::ResponseDialogue
+  graph: {fileID: 11400000}
+  position: {x: 84.63003, y: -151.71}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 4003666918858746133}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit 0
+        node: {fileID: 3061707995955018880}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 4003666918858746133}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 5212121528104068789}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  dialogueSpoken: Please stop bothering the other ghost
+  entry: 0
+  exit: 0
+  conditionType: 0
+  requiredQuestID: 
+--- !u!114 &5212121528104068789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a8fed7df4b96f4899cf285f37fc8a9, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  graph: {fileID: 11400000}
+  position: {x: 393.18002, y: -119.040016}
+  ports:
+    keys:
+    - entry
+    - exit
+    - exit 0
+    values:
+    - _fieldName: entry
+      _node: {fileID: 5212121528104068789}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: 4003666918858746133}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 5212121528104068789}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit 0
+      _node: {fileID: 5212121528104068789}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -3771128512145082399}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  dialogueSpoken: OK, we'll be more careful from now on
+  entry: 0
+  exit: 0
+  speakerName: Big Ghost
+  startsQuest: 0
+  questToStart: {fileID: 0}
+  completesQuest: 1
+  questToCompleteID: Repel Ghosts
+  conditionType: 0
+  requiredQuestID: 
